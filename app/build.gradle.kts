@@ -32,16 +32,16 @@ checkstyle {
     configFile = File(rootDir, "./config/checkstyle/checkstyle.xml")
 }
 
-//sonar {
-//    properties {
-//        property ("sonar.projectKey", "maruseevvlad_java-project-78")
-//        property ("sonar.organization", "maruseevvlad")
-//        property ("sonar.host.url", "https://sonarcloud.io")
-//        property("sonar.verbose", "true") // Включить подробный вывод
-//        property("sonar.scanner.dumpToFile", "true") // Сохранить лог в файл
-//        property("sonar.login", System.getenv("SONAR_TOKEN"))
-//    }
-//}
+sonar {
+    properties {
+        property ("sonar.projectKey", "maruseevvlad_java-project-78")
+        property ("sonar.organization", "maruseevvlad")
+        property ("sonar.host.url", "https://sonarcloud.io")
+        property("sonar.verbose", "true") // Включить подробный вывод
+        property("sonar.scanner.dumpToFile", "true") // Сохранить лог в файл
+        property("sonar.login", System.getenv("SONAR_TOKEN"))
+    }
+}
 
 tasks.test {
     useJUnitPlatform()
