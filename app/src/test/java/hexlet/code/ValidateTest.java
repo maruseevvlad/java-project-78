@@ -91,7 +91,7 @@ public class ValidateTest {
     public void testArraySchema() {
         var v = new Validator();
         var schema = v.map();
-        Map<String, BaseSchema<?>> schemas = new HashMap<>();
+        Map<String, BaseSchema<String>> schemas = new HashMap<>();
         schemas.put("firstName", v.string().required());
         schemas.put("lastName", v.string().required().minLength(2));
         schema.shape(schemas);
