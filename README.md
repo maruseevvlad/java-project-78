@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/e75088d7-de6c-442a-8b6e-73b522c0e7c3)### Hexlet & SonarQube tests and linter status:
+### Hexlet & SonarQube tests and linter status:
 [![Actions Status](https://github.com/maruseevvlad/java-project-78/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/maruseevvlad/java-project-78/actions)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=maruseevvlad_java-project-78&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=maruseevvlad_java-project-78)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=maruseevvlad_java-project-78&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=maruseevvlad_java-project-78)
