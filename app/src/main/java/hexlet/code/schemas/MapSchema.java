@@ -24,8 +24,12 @@ public final class MapSchema extends BaseSchema<Map<?, ?>> {
 
     @Override
     public boolean isValid(Object value) {
+        if (isRequired && value == null) {
+            return false;
+        }
+
         if (value == null) {
-            return !isRequired;
+            return true;
         }
 
         if (!(value instanceof Map)) {

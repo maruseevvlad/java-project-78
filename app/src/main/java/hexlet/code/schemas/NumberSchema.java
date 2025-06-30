@@ -27,8 +27,12 @@ public final class NumberSchema extends BaseSchema<Number> {
 
     @Override
     public boolean isValid(Object value) {
+        if (isRequired && value == null) {
+            return false;
+        }
+
         if (value == null) {
-            return !isRequired;
+            return true;
         }
 
         if (!(value instanceof Integer)) {
