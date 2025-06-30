@@ -84,7 +84,6 @@ public class ValidateTest {
         assertFalse(schema.isValid(data));
         data.put("key2", "value2");
         assertTrue(schema.isValid(data));
-
     }
 
     @Test
@@ -93,7 +92,7 @@ public class ValidateTest {
         var schema = v.map();
         Map<String, BaseSchema<String>> schemas = new HashMap<>();
         schemas.put("firstName", v.string().required());
-        schemas.put("lastName", v.string().required().minLength(2));
+        schemas.put("lastName", v.string().minLength(2).required());
         schema.shape(schemas);
 
         Map<String, String> human1 = new HashMap<>();

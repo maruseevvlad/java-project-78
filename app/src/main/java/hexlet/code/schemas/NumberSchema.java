@@ -6,12 +6,6 @@ import java.util.List;
 public final class NumberSchema extends BaseSchema<Number> {
     private boolean isPositive = false;
     private List<Integer> range = null;
-    private boolean isRequired = false;
-
-    public NumberSchema required() {
-        isRequired = true;
-        return this;
-    }
 
     public NumberSchema positive() {
         this.isPositive = true;

@@ -3,12 +3,6 @@ package hexlet.code.schemas;
 public final class StringSchema extends BaseSchema<String> {
     private Integer minLength = null;
     private String containsSubstring  = null;
-    private boolean isRequired = false;
-
-    public StringSchema required() {
-        isRequired = true;
-        return this;
-    }
 
     public StringSchema minLength(int length) {
         this.minLength = length;
