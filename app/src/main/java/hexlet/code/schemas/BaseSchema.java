@@ -5,11 +5,11 @@ public abstract class BaseSchema<T> {
 
     public abstract boolean isValid(Object o);
 
-    public boolean getIsRequired() {
+    public final boolean getIsRequired() {
         return isRequired;
     }
 
-    public void setIsRequired(boolean value) {
+    public final void setIsRequired(boolean value) {
         isRequired = value;
     }
 }
