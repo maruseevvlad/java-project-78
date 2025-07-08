@@ -92,7 +92,7 @@ public class ValidateTest {
         var schema = v.map();
         Map<String, BaseSchema<String>> schemas = new HashMap<>();
         schemas.put("firstName", v.string().required());
-        schemas.put("lastName", v.string().minLength(2).required());
+        schemas.put("lastName", v.string().required().minLength(2));
         schema.shape(schemas);
 
         Map<String, String> human1 = new HashMap<>();
