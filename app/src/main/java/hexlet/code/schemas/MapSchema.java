@@ -7,7 +7,7 @@ public final class MapSchema extends BaseSchema<Map<?, ?>> {
     private Map<String, BaseSchema<String>> shape;
 
     public MapSchema required() {
-        isRequired = true;
+        setIsRequired(true);
         return this;
     }
 
@@ -23,7 +23,7 @@ public final class MapSchema extends BaseSchema<Map<?, ?>> {
 
     @Override
     public boolean isValid(Object value) {
-        if (isRequired && value == null) {
+        if (getIsRequired() && value == null) {
             return false;
         }
 

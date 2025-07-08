@@ -1,11 +1,11 @@
 package hexlet.code.schemas;
 
 public final class StringSchema extends BaseSchema<String> {
-    public Integer minLength = null;
+    private Integer minLength = null;
     private String containsSubstring  = null;
 
     public StringSchema required() {
-        isRequired = true;
+        setIsRequired(true);
         return this;
     }
 
@@ -21,7 +21,7 @@ public final class StringSchema extends BaseSchema<String> {
 
     @Override
     public boolean isValid(Object value) {
-        if (isRequired && value == null) {
+        if (getIsRequired() && value == null) {
             return false;
         }
 
@@ -35,7 +35,7 @@ public final class StringSchema extends BaseSchema<String> {
 
         String str = (String) value;
 
-        if (isRequired && str.trim().isEmpty()) {
+        if (getIsRequired() && str.trim().isEmpty()) {
             return false;
         }
 

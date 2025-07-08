@@ -8,7 +8,7 @@ public final class NumberSchema extends BaseSchema<Number> {
     private List<Integer> range = null;
 
     public NumberSchema required() {
-        isRequired = true;
+        setIsRequired(true);
         return this;
     }
 
@@ -26,7 +26,7 @@ public final class NumberSchema extends BaseSchema<Number> {
 
     @Override
     public boolean isValid(Object value) {
-        if (isRequired && value == null) {
+        if (getIsRequired() && value == null) {
             return false;
         }
 
